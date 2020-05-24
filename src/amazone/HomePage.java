@@ -37,21 +37,36 @@ public class HomePage {
        // click search button
         driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
         Thread.sleep(10000);
+        driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[4]/div[2]/div[6]/div/span/div/div/span/a/div/img")).click();
+        driver.findElement(By.xpath("")).click();
 
-        String title = driver.getTitle();
-        System.out.println(title);
+//        driver.findElement(By.name("sfsrjj")).click();
+//        driver.findElement(By.id("sfsrjj")).click();
+//        driver.findElement(By.tagName("sfsrjj")).click();
+//        driver.findElement(By.className("sfsrjj")).click();
+//        driver.findElement(By.linkText("sfsrjj")).click();
+//        driver.findElement(By.partialLinkText("sfsrjj")).click();
 
-      //  String currentUrl = driver.getCurrentUrl();
-       // System.out.println(currentUrl);
+       // String title = driver.getTitle();
+        //System.out.println(title);
+
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
 
         //driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("Computer");
 
 
         // close the running windows only
 //        driver.close();
-        // close all the open windows
+         //close all the open windows
+
+
+
+
         driver.quit();
 
     }
+
+
 
 }
