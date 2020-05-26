@@ -24,13 +24,13 @@ public class FormFillUp {
         driver.findElement(By.xpath("//input[@id='RESULT_TextField-2']")).sendKeys("Rashid");
 
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@id=\"RESULT_TextField-3\"]")).sendKeys("3473208854");
+        driver.findElement(By.xpath("//*[@id=\"RESULT_TextField-3\"]")).sendKeys("33322225555");
         Thread.sleep(3000);
         driver.findElement(By.cssSelector("#RESULT_TextField-4")).sendKeys("USA");
         Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\"RESULT_TextField-5\"]")).sendKeys("Queens");
         Thread.sleep(3000);
-        driver.findElement(By.cssSelector("#RESULT_TextField-6")).sendKeys("smhrash@gmail.com");
+        driver.findElement(By.cssSelector("#RESULT_TextField-6")).sendKeys("sdgssh@gmail.com");
         Thread.sleep(3000);
 
         WebElement maleRadio = driver.findElement(By.xpath("//label[contains(text(),'Male')]"));
