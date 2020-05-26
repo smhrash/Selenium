@@ -25,6 +25,14 @@ public class CreateXpath {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//input[@type='submit'][@name='Submit']")).click();
         Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id=\"dashboard-quick-launch-panel-menu_holder\"]/table/tbody/tr/td[1]/div/a/img")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[@type='text'][@name='assignleave[txtEmployee][empName]']")).sendKeys("Sarker");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//select[@name='assignleave[txtLeaveType]']")).click();
+        Thread.sleep(3000);
+
+
         driver.quit();
 
 
