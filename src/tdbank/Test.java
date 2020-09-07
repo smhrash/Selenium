@@ -11,6 +11,8 @@ public class Test {
 
     public static void figureOut() throws InterruptedException {
 
+        System.setProperty("webDriver.chrome.driver","/Users/user/IdeaProjects/Selenium/BrowserDriver/mac/chromedriver");
+
         ChromeDriver driver=new ChromeDriver();
 
         driver.navigate().to(url);

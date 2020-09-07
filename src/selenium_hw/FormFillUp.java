@@ -1,9 +1,11 @@
 package selenium_hw;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -54,6 +56,17 @@ public class FormFillUp {
         WebElement select = driver.findElement(By.xpath("//*[@id=\"RESULT_RadioButton-9\"]"));
         System.out.println(select.getText());
         Thread.sleep(3000);
+        // Handling Drop-Down Menu
+        WebElement dropdown = driver.findElement(By.xpath("//select[@id='RESULT_RadioButton-9']"));
+        // Finding out how many total options available in dropdown
+        Select selectDropdown = new Select(dropdown);
+       // System.out.println("Dropdown number of options are: " + selectDropdown.getOptions().size());
+        List<WebElement> dropdownOptions = selectDropdown.getOptions();
+        for (WebElement e : dropdownOptions) {
+            System.out.println(e.getText());
+        }
+        selectDropdown.selectByVisibleText("Afternoon");//("Afternoon");
+        Thread.sleep(5000);
 
         driver.quit();
 

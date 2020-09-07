@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public class Orange {
         3. Log in (Username: Admin | PW: admin123)
      */
 
-    public static WebDriver chromeDriver = new ChromeDriver();
+    public static WebDriver chromeDriver = new FirefoxDriver();
     public static String url = "https://opensource-demo.orangehrmlive.com/";
     public static String url2 = "https://fs2.formsite.com/meherpavan/form2/index.html?1537702596407";
     private static String username = "Admin";
@@ -130,6 +131,7 @@ public class Orange {
             System.out.println(e.getText());
         }
         selectDropdown.selectByVisibleText("Afternoon");
+        Thread.sleep(5000);
         chromeDriver.quit();
     }
 }
